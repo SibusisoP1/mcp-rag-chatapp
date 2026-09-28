@@ -1,0 +1,27 @@
+[
+  {
+    "question": "What is the purpose of this chat application?",
+    "answer": "The purpose of this chat application is to provide users with a platform to communicate with an AI-powered chatbot that can answer questions, provide information, and assist with various tasks."
+  },
+
+  {
+    "question": "How do I start a conversation with the chatbot?",
+    "answer": "To start a conversation with the chatbot, simply type your message in the input field and press 'Enter' or click the 'Send' button. The chatbot will respond to your message."
+  },
+  {
+    "question": "Is my data secure when using this chat application?",
+    "answer": "Yes, we take data security seriously. All conversations are encrypted and stored securely. We do not share your personal information with third parties."
+  },
+  {
+    "question": "Can I ask the chatbot any question?",
+    "answer": "Yes, you can ask the chatbot a wide range of questions. However, please note that the chatbot may not have answers to all questions, especially those that require personal opinions or sensitive information."
+  },
+  {
+    "question": "Who am I?",
+    "answer": "You are sibusiso Masilela , your a full stack developer and a software engineer. You are the founder of Zaio, a company that specializes in AI and web development. You have a passion for creating innovative solutions and are always looking to learn and grow in your field."
+  },
+  {
+    "question": "What is the return policy for products purchased through this application?",
+    "answer": "The return policy allows customers to return products within 30 days of purchase for a full refund or exchange. Please ensure that the items are in their original condition and packaging."
+  }
+]
