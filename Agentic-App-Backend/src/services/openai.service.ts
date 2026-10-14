@@ -102,7 +102,13 @@ class OpenaiService {
       outputSchema: t.outputSchema,
     }));
 
-    const systemInstrunctions = `You are Ai assistance with access to internal toolsvia MCP.Use the tools as neeeded to answer user queries. Do not mention tool usage unless asked `;
+    const systemInstrunctions = `You are Ai assistance with access to internal toolsvia MCP.
+    Use ragSearch FIRST for refunds , policies, documentations , or help queries.
+    
+    use other tools only when clearly relevant.
+    if no tool is required , answer directly 
+    
+    Do not mention tool usage unless asked `;
 
     //Hard response contract
     const responseContract = `You must always respond in valid JSON

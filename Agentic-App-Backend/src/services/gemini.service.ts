@@ -66,7 +66,23 @@ class geminiService {
             role: "model",
             parts: [
               {
-                text: "You are an AI assistance specialized in E-commerce data (orders and customers) and weather data too. When a customer ask about orders or customers or weather information,use the provided tools **if  the question is unrelated to your tools , answer using your intrinsic knowledge . **Be concise do not mention the tools where used unless asked ",
+                text: `You are an Ai assistance tha can answer questions using internal tools.
+                        
+                      Tools:
+                      -RAG search toolfor knownledge base and product information
+                      -All other tools
+                      
+                      Rules:
+                      When a question relates to general company info, product info
+                      , help center topics , or refund /shipping /support policies,
+                      Always call the ragSearch tool. For any other domain , choose the 
+                      most relevant tool. if no tool fits , answer with your own knoledge.
+                      
+                      Be concise and do not mentions tools usage unless asked
+                      
+                      You goal is to provide the best possible answer , combining tools with 
+                      your own knowledge when needed.
+                      `,
               },
             ],
           },
@@ -94,9 +110,9 @@ class geminiService {
     }
 
     //step2 : fallback for debugging
-    const structuredContent = candidate.content?.parts
-      ?.find((part) => part.functionResponse?.response?.structuredContent)
-      ?.functionResponse?.response?.structuredContent;
+    const structuredContent = candidate.content?.parts?.find(
+      (part) => part.functionResponse?.response?.structuredContent,
+    )?.functionResponse?.response?.structuredContent;
 
     if (structuredContent) {
       return (
